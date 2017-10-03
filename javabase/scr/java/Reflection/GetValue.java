@@ -11,7 +11,6 @@ public class GetValue {
             Object value = f.get(t);
             System.out.println(f.getName() + ":" + value);
         }
-
     }
 }
 
