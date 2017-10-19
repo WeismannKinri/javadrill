@@ -13,5 +13,9 @@ public class JavaString {
         System.out.println(a1=="a");
         System.out.println(a1.equals("a"));
         System.out.println("a".equals(a1));
+
+        Long b1= new Long(2);
+        Long b2= new Long(2);
+        System.out.println(b1==b2);
     }
 }
