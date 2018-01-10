@@ -8,6 +8,8 @@
     <module>pattern</module>
     <module>concurrency</module>
     <module>guavaDrill</module>
+      <module>spring</module>
+      <module>algorithm</module>
   </modules>
 
 
