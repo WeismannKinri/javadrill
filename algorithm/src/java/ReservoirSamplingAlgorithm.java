@@ -12,7 +12,7 @@ public class ReservoirSamplingAlgorithm {
         int[] result=reservoirSampling(data,k);
         System.out.println(Arrays.toString(result));
     }
-    
+
 
     public static int[] reservoirSampling(int[] data,int k){
         if(data==null){
