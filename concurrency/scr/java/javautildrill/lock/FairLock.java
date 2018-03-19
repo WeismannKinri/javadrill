@@ -18,8 +18,8 @@ public class FairLock implements Runnable{
 
     public static void main(String[] args) {
         FairLock fr = new FairLock();
-        Thread t1 = new Thread(fr);
-        Thread t2 = new Thread(fr);
+        Thread t1 = new Thread(fr,"t1");
+        Thread t2 = new Thread(fr,"t2");
         t1.start();
         t2.start();
     }

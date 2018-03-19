@@ -6,7 +6,6 @@ import java.util.concurrent.Semaphore;
 
 public class SemapDemo implements  Runnable{
     final Semaphore semp = new Semaphore(5);
-
     @Override
     public void run() {
         try{
