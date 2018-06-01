@@ -1,5 +1,4 @@
-package concurrency.base;
-
+package others;
 public class ThreadGroupName implements Runnable{
     public static void main(String[] args) {
         ThreadGroup tg = new ThreadGroup("PrintGroup");
@@ -10,7 +9,6 @@ public class ThreadGroupName implements Runnable{
         System.out.println(tg.activeCount());
         tg.list();
     }
-
     @Override
     public void run() {
         String groupAndName = Thread.currentThread().getThreadGroup().getName() +"-"+ Thread.currentThread().getName();
