@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <import resource="second-spring-config.xml"/>
+
+    <bean id="leijun" class="hello.drill.HelloWorld">
+        <property name="name" value="Spring"></property>
+        <property name="h2" ref="h2"></property>
+        <property name="h3" ref="h3"></property>
+    </bean>
+
+    <bean class="hello.drill.H2" id="h2">
+        <property name="name" value="ok"/>
+    </bean>
+
+    <bean id="clientService"
+          class="initial.ClientService"
+          factory-method="createInstance"/>
+
+</beans>
