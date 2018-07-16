@@ -75,10 +75,10 @@
             <version>3.0.9.RELEASE</version>
         </dependency>
 
-        <!-- https://mvnrepository.com/artifact/org.springframework/spring-test -->
+        <!-- https://mvnrepository.com/artifact/org.springframework/spring-first.test -->
         <dependency>
             <groupId>org.springframework</groupId>
-            <artifactId>spring-test</artifactId>
+            <artifactId>spring-first.test</artifactId>
             <version>5.0.7.RELEASE</version>
         </dependency>
 
