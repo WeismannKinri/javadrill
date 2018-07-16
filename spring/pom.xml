@@ -13,6 +13,7 @@
     <packaging>pom</packaging>
     <modules>
         <module>SpringXML</module>
+        <module>springAnnotation</module>
     </modules>
     <dependencies>
         <dependency>
@@ -80,6 +81,7 @@
             <artifactId>spring-test</artifactId>
             <version>5.0.7.RELEASE</version>
         </dependency>
+
 
 
 

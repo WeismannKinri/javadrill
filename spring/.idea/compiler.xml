@@ -6,11 +6,13 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="springAnnotation" />
         <module name="SpringXML" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="spring" target="1.8" />
+      <module name="springAnnotation" target="1.8" />
       <module name="SpringXML" target="1.8" />
     </bytecodeTargetLevel>
   </component>

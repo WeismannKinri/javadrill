@@ -12,6 +12,5 @@ public class Main {
         ClientService clientService = context.getBean("clientService",ClientService.class);
         if(clientService!=null)
             System.out.println("cs is not null");
-
     }
 }
