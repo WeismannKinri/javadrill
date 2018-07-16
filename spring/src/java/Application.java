@@ -21,5 +21,8 @@ public class Application {
                 new AnnotationConfigApplicationContext(Application.class);
         MessagePrinter printer = context.getBean(MessagePrinter.class);
         printer.printMessage();
+        System.out.println("1");
     }
+
+
 }
