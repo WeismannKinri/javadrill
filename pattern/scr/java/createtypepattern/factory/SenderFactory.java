@@ -7,6 +7,4 @@ public class SenderFactory {
     public static Sender SmsSender(){
         return new SmsSender();
     }
-
-
 }
