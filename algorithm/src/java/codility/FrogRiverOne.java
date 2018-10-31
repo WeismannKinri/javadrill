@@ -1,8 +1,21 @@
 package codility;
 
 public class FrogRiverOne {
-    public int solution(int X, int Y, int D) {
-        // write your code in Java SE 8
-        return (((Y-X)/D) +((((Y-X)%D)==0)?0:1));
+    public int solution(int X, int[] A){
+        boolean[] seen = new boolean[X];
+        int index = -1;
+        for(int i=0;i<A.length;i++){
+            if(A[i]<=X && seen[A[i]-1]!=true) {
+                seen[A[i]-1] = true;
+                index=i;
+            }
+        }
+
+        for(int j=0;j<X;j++){
+            if(seen[j]==false)
+                return -1;
+        }
+
+        return index;
     }
 }
