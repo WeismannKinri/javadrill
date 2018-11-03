@@ -1,4 +1,4 @@
-package codility;
+package codility.StacksandQueues;
 
 // you can also use imports, for example:
 // import java.util.*;

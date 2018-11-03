@@ -1,4 +1,4 @@
-package codility;
+package codility.PrefixSums;
 
 public class MinAvgTwoSlice {
     public int solution(int[] A) {

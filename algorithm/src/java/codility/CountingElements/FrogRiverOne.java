@@ -1,4 +1,4 @@
-package codility;
+package codility.CountingElements;
 
 public class FrogRiverOne {
     public int solution(int X, int[] A){

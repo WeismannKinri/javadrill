@@ -1,4 +1,4 @@
-package codility;
+package codility.CountingElements;
 
 import java.util.LinkedList;
 import java.util.List;

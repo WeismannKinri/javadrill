@@ -1,7 +1,7 @@
-package codility;
+package codility.Maximumsliceproblem;
 
 public class MaxSliceSum {
-    public int solution(int[] A){
+    public static int solution(int[] A){
         int size = A.length;
         int value = A[0];
         int last = value;
@@ -13,4 +13,10 @@ public class MaxSliceSum {
         }
         return value;
     }
+
+    public static void main(String[] args) {
+        int [] a=  new int[]{1,2,3,-10,3};
+        System.out.println(solution(a));
+    }
+
 }

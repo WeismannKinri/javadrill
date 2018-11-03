@@ -1,4 +1,4 @@
-package codility;
+package codility.Arrays;
 
 public class OddOccurrencesInArray {
     public static void main(String[] args) {

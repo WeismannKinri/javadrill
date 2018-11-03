@@ -1,4 +1,4 @@
-package codility;
+package codility.CountingElements;
 
 public class MissingInteger {
     public int solution(int[] A){

@@ -1,4 +1,4 @@
-package codility;
+package codility.PrefixSums;
 
 public class GenomicRangeQuery {
     public int[] solution(String S, int[] P, int[] Q) {

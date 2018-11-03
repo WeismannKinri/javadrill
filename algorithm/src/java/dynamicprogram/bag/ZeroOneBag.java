@@ -1,4 +1,4 @@
-package dynamicprogram;
+package dynamicprogram.bag;
 
 public class ZeroOneBag {
 

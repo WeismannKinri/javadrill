@@ -1,6 +1,6 @@
-package codility;
+package codility.Arrays;
 
-public class ArrayRotation {
+public class CyclicRotation {
 
     public static void main(String[] args) {
 

@@ -1,4 +1,4 @@
-package codility;
+package codility.PrefixSums;
 
 public class PassingCars {
     public int solution(int[] A) {

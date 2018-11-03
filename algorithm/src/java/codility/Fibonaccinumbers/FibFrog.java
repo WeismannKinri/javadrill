@@ -1,4 +1,4 @@
-package codility;
+package codility.Fibonaccinumbers;
 
 public class FibFrog {
     public int solution(int[] A) {

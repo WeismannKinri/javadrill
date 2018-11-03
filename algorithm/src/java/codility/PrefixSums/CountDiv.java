@@ -1,4 +1,4 @@
-package codility;
+package codility.PrefixSums;
 
 public class CountDiv {
     public static int solution(int A, int B, int K) {

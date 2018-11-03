@@ -1,10 +1,10 @@
-package dynamicprogram;
+package dynamicprogram.bag;
 
 public class ManyPack {
     /**
      * 第三类背包：多重背包
      *
-     * @param args
+     * @param V
      */
     public static int manyPack(int V,int N,int[] weight,int[] value,int[] num){
         //初始化动态规划数组

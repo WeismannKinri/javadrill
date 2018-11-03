@@ -1,4 +1,4 @@
-package codility;
+package codility.CountingElements;
 
 public class PermCheck {
     public static void main(String[] args) {
