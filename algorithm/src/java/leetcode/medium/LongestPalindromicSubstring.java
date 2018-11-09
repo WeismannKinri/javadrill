@@ -1,4 +1,4 @@
-package leetcode;
+package leetcode.medium;
 
 public class LongestPalindromicSubstring {
     public String longestPalindrome(String s) {
@@ -38,4 +38,38 @@ public class LongestPalindromicSubstring {
         int start = (maxCenter - 1 - maxLen) / 2;
         return s.substring(start, start + maxLen);
     }
+
+
+    public String longestPalindromeWithDP(String s)
+    {
+        if(s.length() <= 1) return s;
+
+        boolean[][] P = new boolean[s.length()][s.length()];
+        String res = new String();
+        for(int i = 0; i < s.length();i++) P[i][i] = true;
+        int max = 0;
+        for(int i = 0; i < s.length();i++)
+        {
+            for(int j = 0; j < i; j++)
+            {
+                P[j][i] = (s.charAt(j) == s.charAt(i) && (i-j <= 2 || P[j+1][i-1]));
+                if(P[j][i])
+                {
+                    if(i-j + 1 > max)
+                    {
+                        max = i-j+1;
+                        res = new String(s.substring(j,i+1));
+                    }
+
+
+                }
+            }
+        }
+
+        return res;
+
+
+    }
+
+
 }

@@ -1,7 +1,7 @@
 package leetcode.easy.PalindromeNumber;
 
 public class PalindromeNumber {
-    public boolean isPalindrome(int x) {
+    public static boolean isPalindrome(int x) {
         //negative numbers are not palindrome
         if (x < 0)
             return false;
@@ -24,5 +24,9 @@ public class PalindromeNumber {
         }
 
         return true;
+    }
+
+    public static void main(String[] args) {
+        System.out.println(isPalindrome(-121));
     }
 }

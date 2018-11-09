@@ -1,6 +1,5 @@
 package leetcode.easy.ReverseInteger;
 
-import java.util.InputMismatchException;
 import java.util.LinkedList;
 import java.util.Queue;
 
@@ -11,7 +10,7 @@ public class ReverseInteger {
         while(x!=0){
             count++;
             int r=x%10;
-            q.add(r);
+            q.offer(r);
             x=(x-r)/10;
         }
 
