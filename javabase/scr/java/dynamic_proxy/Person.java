@@ -1,4 +1,4 @@
-package ｄynamic_proxy;
+package dynamic_proxy;
 
 public interface Person {
     public void sayHello(String content, int age);

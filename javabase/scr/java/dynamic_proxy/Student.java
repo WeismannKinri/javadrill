@@ -1,4 +1,4 @@
-package ｄynamic_proxy;
+package dynamic_proxy;
 
 public class Student implements Person{
 
