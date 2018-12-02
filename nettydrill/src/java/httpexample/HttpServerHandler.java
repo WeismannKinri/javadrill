@@ -1,29 +1,6 @@
-package httpexample;
+BeanFactoryBeanFactory
 
-import io.netty.channel.ChannelFutureListener;
-import io.netty.channel.ChannelHandlerContext;
-import io.netty.channel.ChannelInboundHandlerAdapter;
-import io.netty.handler.codec.http.*;
-
-import java.util.HashMap;
-import java.util.Map;
-
-public class HttpServerHandler extends ChannelInboundHandlerAdapter {
-    private String content = "hello world";
-    private final static String LOC = "302";
-    private final static String NOT_FOND = "404";
-    private final static String BAD_REQUEST = "400";
-    private final static String INTERNAL_SERVER_ERROR = "500";
-    private static Map<String, HttpResponseStatus> mapStatus = new HashMap<String, HttpResponseStatus>();
-
-    static {
-        mapStatus.put(LOC, HttpResponseStatus.FOUND);
-        mapStatus.put(NOT_FOND, HttpResponseStatus.NOT_FOUND);
-        mapStatus.put(BAD_REQUEST, HttpResponseStatus.BAD_REQUEST);
-        mapStatus.put(INTERNAL_SERVER_ERROR, HttpResponseStatus.INTERNAL_SERVER_ERROR);
-    }
-
-    @Override
+@Override
     public void channelRead(ChannelHandlerContext ctx, Object msg) throws Exception {
         if (msg instanceof HttpRequest) {
             HttpRequest request = (HttpRequest) msg;

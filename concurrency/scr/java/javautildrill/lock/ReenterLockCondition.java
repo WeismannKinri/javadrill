@@ -25,6 +25,9 @@ public class ReenterLockCondition implements Runnable{
         t1.start();
         Thread.sleep(200);
 
+
+
+
         lock.lock();
         condition.signal();
         System.out.println("before unlock the lock");
@@ -32,3 +35,4 @@ public class ReenterLockCondition implements Runnable{
         System.out.println("after unlock the lock");
     }
 }
+

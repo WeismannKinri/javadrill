@@ -44,6 +44,8 @@ class ProxyObject implements InvocationHandler {
 
     public Object invoke(Object arg0, Method arg1, Object[] arg2) throws Throwable {
         System.out.println("hello");
+        arg1.invoke(proxied, arg2);
+        System.out.println("are you ok");
         return arg1.invoke(proxied, arg2);
     }
 }
