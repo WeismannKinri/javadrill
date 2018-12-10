@@ -1,8 +1,4 @@
 package others.thread.local;
-
-import java.util.concurrent.CountDownLatch;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
 import java.util.concurrent.atomic.AtomicInteger;
 
 public class ThreadLocalDemo {
@@ -15,9 +11,10 @@ public class ThreadLocalDemo {
                 }
             };
             t.start();
+
         }
     }
-    static   class ThreadId{
+    static class ThreadId{
         //一个递增的序列，使用AtomicInger原子变量保证线程安全
         private static final AtomicInteger nextId = new AtomicInteger(0);
         //线程本地变量，为每个线程关联一个唯一的序号
