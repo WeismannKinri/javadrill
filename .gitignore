@@ -75,17 +75,37 @@ fabric.properties
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 # dependencies
+
+/study/node_modules
+/study/.pnp
+/study/.pnp.js
 /node_modules
 /.pnp
 .pnp.js
 
 # testing
+/study/coverage
 /coverage
 
 # production
+/study/build
 /build
 
 # misc
+/study/.DS_Store
+/study/.env.local
+/study/.env.development.local
+/study/.env.test.local
+/study/.env.production.local
+
+/study/npm-debug.log*
+/study/yarn-debug.log*
+/study/yarn-error.log*
+
+
+/study/.idea
+/study/.idea/
+
 .DS_Store
 .env.local
 .env.development.local
@@ -95,3 +115,5 @@ fabric.properties
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+
