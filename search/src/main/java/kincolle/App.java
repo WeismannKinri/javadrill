@@ -14,7 +14,6 @@ import java.io.StringReader;
  */
 public class App{
     public static void main( String[] args ) throws IOException {
-        stdAnalyzer("尴尬！这种房子比市场价低30% 却没啥人买");
         stdAnalyzer("Executing a GetRequest can also be done in an asynchronous fashion so that the client can return directly.");
     }
 
@@ -33,7 +32,5 @@ public class App{
         analyzer.close();
 
 
-
     }
-
 }
