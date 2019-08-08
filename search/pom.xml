@@ -72,6 +72,14 @@
             <version>8.0.0</version>
         </dependency>
 
+        <!--commons-io依赖: 方便我们直接解析文件-->
+        <dependency>
+            <groupId>commons-io</groupId>
+            <artifactId>commons-io</artifactId>
+            <version>2.6</version>
+        </dependency>
+
+
     </dependencies>
 
     <build>
