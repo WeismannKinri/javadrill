@@ -20,19 +20,20 @@ public class Index {
     public static void main(String[] args) throws IOException {
         IndexTest();
     }
+
     /**
      * 创建索引
      */
-    public static void  IndexTest() throws IOException {
-        Document doc=new Document();
+    public static void IndexTest() throws IOException {
+        Document doc = new Document();
 //        doc.add(new LongField("id", 1, Field.Store.YES));
         doc.add(new TextField("title", "如何学习lucene", Field.Store.YES));
         doc.add(new TextField("content", "掌握原理，熟悉API，多看文档", Field.Store.YES));
-        Directory dir=FSDirectory.open(Paths.get("D:\\lucene"));
+        Directory dir = FSDirectory.open(Paths.get("D:\\lucene"));
 
-        Analyzer analyzer=new StandardAnalyzer();
-        IndexWriterConfig config=new IndexWriterConfig(analyzer);
-        IndexWriter index=new IndexWriter(dir, config);
+        Analyzer analyzer = new StandardAnalyzer();
+        IndexWriterConfig config = new IndexWriterConfig(analyzer);
+        IndexWriter index = new IndexWriter(dir, config);
         index.addDocument(doc);
         index.close();
     }

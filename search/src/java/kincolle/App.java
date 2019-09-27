@@ -23,6 +23,8 @@ public class App{
         analyzer= new StandardAnalyzer();
         StringReader reader = new StringReader(srt);
         TokenStream toStream = analyzer.tokenStream(srt,reader);
+
+
         toStream.reset();
         CharTermAttribute teAttribute = toStream.getAttribute(CharTermAttribute.class);
         System.out.println("分词结果：");
@@ -31,9 +33,5 @@ public class App{
         }
         System.out.println("\n");
         analyzer.close();
-
-
-
     }
-
 }
