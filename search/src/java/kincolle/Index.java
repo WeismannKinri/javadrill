@@ -3,8 +3,10 @@ package kincolle;
 import org.apache.lucene.analysis.Analyzer;
 import org.apache.lucene.analysis.standard.StandardAnalyzer;
 import org.apache.lucene.document.*;
+import org.apache.lucene.index.IndexOptions;
 import org.apache.lucene.index.IndexWriter;
 import org.apache.lucene.index.IndexWriterConfig;
+import org.apache.lucene.index.Term;
 import org.apache.lucene.store.Directory;
 import org.apache.lucene.store.FSDirectory;
 
@@ -25,6 +27,7 @@ public class Index {
      * 创建索引
      */
     public static void IndexTest() throws IOException {
+
         Document doc = new Document();
 //        doc.add(new LongField("id", 1, Field.Store.YES));
         doc.add(new TextField("title", "如何学习lucene", Field.Store.YES));
@@ -39,6 +42,23 @@ public class Index {
         doc.add(new IntRangeDocValuesField("IntRangeDocValuesField", min,max));
         doc.add(new SortedNumericDocValuesField("SortedNumericDocValuesField", 1));
 
+        // 字段content
+        String name = "content";
+        String value = "张三说的确实在理";
+        FieldType type = new FieldType();
+        // 设置是否存储该字段
+        type.setStored(true); // 请试试不存储的结果
+        // 设置是否对该字段分词
+        type.setTokenized(true); // 请试试不分词的结果
+        // 设置该字段的索引选项
+        type.setIndexOptions(IndexOptions.DOCS_AND_FREQS_AND_POSITIONS_AND_OFFSETS); // 请尝试不同的选项的效果
+        type.freeze(); // 使不可更改
+
+        Field field = new Field(name, value, type);
+        doc.add(field);
+
+
+
         Directory dir = FSDirectory.open(Paths.get("D:\\lucene"));
 
         StandardAnalyzer analyzer = new StandardAnalyzer();
@@ -46,6 +66,13 @@ public class Index {
         IndexWriter index = new IndexWriter(dir, config);
         index.addDocument(doc);
 
+        Term a = new Term("");
+        index.deleteDocuments(a);
+
+        index.forceMerge(1);
+        index.flush();
+        index.maybeMerge();
+        index.commit();
         index.close();
     }
 }

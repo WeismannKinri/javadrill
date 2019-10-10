@@ -16,14 +16,15 @@ public class MyWhitespaceAnalyzer extends Analyzer {
     @Override
     protected TokenStreamComponents createComponents(String fieldName) {
         Tokenizer source = new MyWhitespaceTokenizer();
-        TokenStream filter = new MyLowerCaseTokenFilter(source);
-        return new TokenStreamComponents(source, filter);
+//        TokenStream filter = new MyLowerCaseTokenFilter(source);
+        return new TokenStreamComponents(source);
     }
 
     public static void main(String[] args) {
 
-        String text = "An AttributeSource contains a list of different AttributeImpls, and methods to add and get them. ";
 
+        String text = "An AttributeSource contains a list of different AttributeImpls, and methods to add and get them. ";
+        System.out.println(text.length());
         try {
             Analyzer ana = new MyWhitespaceAnalyzer();
             TokenStream ts = ana.tokenStream("aa", text);
