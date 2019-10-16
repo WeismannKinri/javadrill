@@ -3,12 +3,11 @@ package kincolle;
 import org.apache.lucene.analysis.Analyzer;
 import org.apache.lucene.analysis.standard.StandardAnalyzer;
 import org.apache.lucene.document.*;
-import org.apache.lucene.index.IndexOptions;
-import org.apache.lucene.index.IndexWriter;
-import org.apache.lucene.index.IndexWriterConfig;
-import org.apache.lucene.index.Term;
+import org.apache.lucene.index.*;
 import org.apache.lucene.store.Directory;
 import org.apache.lucene.store.FSDirectory;
+import org.apache.lucene.util.BytesRef;
+import org.elasticsearch.index.fielddata.IndexNumericFieldData;
 
 import java.io.IOException;
 import java.nio.file.Paths;
@@ -56,6 +55,28 @@ public class Index {
 
         Field field = new Field(name, value, type);
         doc.add(field);
+
+
+
+
+
+
+
+        //数值存储例子
+        FieldType num=new FieldType();
+        num.setStored(true);//设置存储
+        num.setIndexOptions(IndexOptions.DOCS);//设置索引类型
+        num.setDocValuesType(DocValuesType.NUMERIC);//DocValue类型
+
+        //添加string字段
+        doc.add(new SortedDocValuesField("id",new BytesRef("01011")));
+        //添加数值类型的字段  Float,Doule需要额外转成bit位才能存储，Interger和Long则不需要
+        doc.add(new DoubleDocValuesField("price", Double.doubleToRawLongBits(25.258)));
+
+
+
+
+
 
 
 
