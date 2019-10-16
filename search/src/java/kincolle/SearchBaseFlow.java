@@ -18,7 +18,7 @@ import org.apache.lucene.store.FSDirectory;
 
 /**
  * @Description: lucene 搜索基本流程示例
- * @author liguangsheng
+ * @author nb
  * @date 2018年5月11日
  *
  */
